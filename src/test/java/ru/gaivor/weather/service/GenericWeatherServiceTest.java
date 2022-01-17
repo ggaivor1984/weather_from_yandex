@@ -1,6 +1,7 @@
 package ru.gaivor.weather.service;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -28,6 +29,7 @@ class GenericWeatherServiceTest {
         underTest = new GenericWeatherService(communication, weatherRepository);
     }
 
+    @Disabled
     @Test
     void canGetLatestTemperatureFromDB() {
         weather.setDate(communication.getWeatherFromYandex().getDate());
